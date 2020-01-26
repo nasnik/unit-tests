@@ -1,0 +1,23 @@
+{
+  "name": "unit-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasnik/unit-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nasnik/unit-tests/issues"
+  },
+  "homepage": "https://github.com/nasnik/unit-tests#readme",
+  "dependencies": {
+    "mocha": "^7.0.0"
+  }
+}
