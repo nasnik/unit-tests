@@ -6,4 +6,9 @@ function mult(a, b){
     return a*b;
 }
 
-module.exports = {sum, mult};
+function breakChocolate(n,m) {
+    if(n <= 0 || m <=0) return 0;
+    return (n * m) - 1;
+}
+
+module.exports = {sum, mult, breakChocolate};
