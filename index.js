@@ -26,5 +26,10 @@ function slope(points){
     slope = (points[3] - points[1])/(points[2] - points[0])
     return slope.toString();
 }
+function past(h, m, s){
+    let ms;
+    ms = (((h * 60) + m)* 60 + s) * 1000;
+    return ms;
+}
 
-module.exports = {sum, mult, breakChocolate, converter, slope};
+module.exports = {sum, mult, breakChocolate, converter, slope, past};

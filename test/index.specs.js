@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {sum, mult, breakChocolate, converter, slope} = require('../index.js');
+const {sum, mult, breakChocolate, converter, slope, past} = require('../index.js');
 
 describe('testing function sum', () =>{
    it('should equal 6', () =>{
@@ -42,4 +42,12 @@ describe('testing function slope', () =>{
     it('should return undefined', () =>{
         assert.equal(slope([4, 2, 4, 18]), 'undefined');
     });
-})
+});
+describe('testing function past', () =>{
+    it('should return 61000', () =>{
+        assert.equal(past(0, 1, 1), 61000);
+    });
+    it('should return 0', () =>{
+        assert.equal(past(0, 0, 0), 0);
+    });
+});
