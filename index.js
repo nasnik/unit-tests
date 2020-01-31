@@ -31,5 +31,10 @@ function past(h, m, s){
     ms = (((h * 60) + m)* 60 + s) * 1000;
     return ms;
 }
+function howMuchILoveYou(nbPetals) {
+    let num = (nbPetals - 1) % 6;
+    const petals = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
+    return petals[num];
+}
 
-module.exports = {sum, mult, breakChocolate, converter, slope, past};
+module.exports = {sum, mult, breakChocolate, converter, slope, past, howMuchILoveYou};

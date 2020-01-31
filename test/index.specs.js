@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {sum, mult, breakChocolate, converter, slope, past} = require('../index.js');
+const {sum, mult, breakChocolate, converter, slope, past, howMuchILoveYou} = require('../index.js');
 
 describe('testing function sum', () =>{
    it('should equal 6', () =>{
@@ -49,5 +49,13 @@ describe('testing function past', () =>{
     });
     it('should return 0', () =>{
         assert.equal(past(0, 0, 0), 0);
+    });
+});
+describe('testing function howMuchILoveYou', ()=>{
+    it('should return I love you',()=>{
+        assert.equal(howMuchILoveYou(7), 'I love you');
+});
+    it('should return not at all', () =>{
+        assert.equal(howMuchILoveYou(6), 'not at all');
     });
 });
