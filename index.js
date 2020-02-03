@@ -36,5 +36,22 @@ function howMuchILoveYou(nbPetals) {
     const petals = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'];
     return petals[num];
 }
-
-module.exports = {sum, mult, breakChocolate, converter, slope, past, howMuchILoveYou};
+function iceBrickVolume(radius, bottleLength, rimLength) {
+    return (2*(radius**2))*(bottleLength - rimLength);
+}
+function angle(n) {
+    if(n == 2) return 90;
+    return angle(n - 1)*2;
+}
+function problem(x){
+    let type = typeof x;
+    return type == 'string' ? 'Error': (x*50) + 6;
+}
+function myFirstKata(a, b) {
+    if (typeof(a) !== "number" || typeof(b) !== "number") {
+        return false;
+    } else if(typeof a === 'number' && typeof b === 'number') {
+        return((a % b) + (b % a));
+    }
+}
+module.exports = {sum, mult, breakChocolate, converter, slope, past, howMuchILoveYou, iceBrickVolume, angle, problem, myFirstKata};

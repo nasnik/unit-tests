@@ -1,9 +1,12 @@
 const assert = require('assert');
-const {sum, mult, breakChocolate, converter, slope, past, howMuchILoveYou} = require('../index.js');
+const {expect} = require('chai');
+const {sum, mult, breakChocolate, converter, slope, past, howMuchILoveYou, iceBrickVolume, angle, problem, myFirstKata} = require('../index.js');
+
 
 describe('testing function sum', () =>{
    it('should equal 6', () =>{
-      assert.equal(sum(2, 3), 5);
+  //    assert.equal(sum(2, 3), 5);
+      expect(sum(2, 3)).to.equal(5);
    });
     it('should not be equal 0', () =>{
         assert.notEqual(sum(2, 3), 0);
@@ -57,5 +60,31 @@ describe('testing function howMuchILoveYou', ()=>{
 });
     it('should return not at all', () =>{
         assert.equal(howMuchILoveYou(6), 'not at all');
+    });
+});
+describe('testing function iceBrickVolume', () =>{
+    it('parameters should be > 0', function () {
+        expect(iceBrickVolume(0, 0, 0)).to.equal(0);
+    });
+});
+describe('testing function angle', () =>{
+    it('should return twice as much as the previous value', () =>{
+        expect(angle(4)).to.equal(360);
+    });
+});
+describe('testing function problem', () =>{
+    it('should return Error if entry is string', () =>{
+        expect(problem('mom')).to.equal('Error');
+    });
+    it('should calculate correctly 56', () =>{
+        expect(problem(1)).to.equal(56);
+    });
+});
+describe('testing function myFirstKata', () =>{
+   it('should return false if one entry isnt a number', ()=>{
+      expect(myFirstKata(3, '6')).to.equal(false);
+   });
+    it('should return correct num', () =>{
+       expect(myFirstKata(3, 5)).to.equal(5);
     });
 });
